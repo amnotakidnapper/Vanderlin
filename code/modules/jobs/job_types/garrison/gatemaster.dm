@@ -21,16 +21,16 @@
 	whitelist_req = FALSE
 	bypass_lastclass = TRUE
 
-	outfit = /datum/outfit/job/guardsman	//Default outfit.
+	outfit = /datum/outfit/job/gatemaster	//Default outfit.
 	advclass_cat_rolls = list(CTAG_GATEMASTER = 20)	//Handles class selection.
 	give_bank_account = 30
 	min_pq = 10
 
 	cmode_music = 'sound/music/cmode/garrison/CombatManAtArms.ogg'
 
-/datum/job/guardsman/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/gatemaster/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
-	if(ishuman(L))
+	if(L)
 		var/mob/living/carbon/human/H = L
 		H.advsetup = 1
 		H.invisibility = INVISIBILITY_MAXIMUM
@@ -48,45 +48,39 @@
 	job_bitflag = BITFLAG_GARRISON
 
 /datum/outfit/job/gatemaster/pre_equip(mob/living/carbon/human/H)
-	..()
+	. = ..()
+	head = /obj/item/clothing/head/helmet/townwatch/alt
 	neck = /obj/item/clothing/neck/gorget
 	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
 	shirt = /obj/item/clothing/armor/gambeson/heavy
 	pants = /obj/item/clothing/pants/trou/leather/guard
-	shoes = /obj/item/clothing/shoes/boots/armor/light
 	wrists = /obj/item/clothing/wrists/bracers/leather
 	head = /obj/item/clothing/head/helmet/townwatch/alt
 	belt = /obj/item/storage/belt/leather/black
 	backl = /obj/item/storage/backpack/satchel/black
 	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special = 1, /obj/item/rope/chain = 1)
 
-/datum/advclass/gatemaster/gatemaster_chainguard
-	name = "Gatemaster Chainguard"
+/datum/advclass/gatemaster/gatemaster_whip
+	name = "Gatemaster "
 	tutorial = "Metal chimes in your hands, their skin rough from those heavy chains you pull. \
 	Day by day, chains pass through your palms. \
 	Day by day, the chains coldness feels more familar. \
-	Day by day, trespassers learn the familar feeling of chains around their neck."
-	outfit = /datum/outfit/job/gatemaster/chainguard
+	Day by day, trespassers hear your chain whip rattling."
+	outfit = /datum/outfit/job/gatemaster/whip
 
-	category_tags = list(CTAG_MENATARMS)
+	category_tags = list(CTAG_GATEMASTER)
 
-/datum/outfit/job/gatemaster/chainguard/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/gatemaster/whip/pre_equip(mob/living/carbon/human/H)
 	..()
 	neck = /obj/item/clothing/neck/gorget
-	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
 	armor = /obj/item/clothing/armor/medium/scale
-	shirt = /obj/item/clothing/armor/gambeson/heavy
-	wrists = /obj/item/clothing/wrists/bracers/leather
-	head = /obj/item/clothing/head/helmet/townwatch/alt
 	gloves = /obj/item/clothing/gloves/chain
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather/black
-	beltl = /obj/item/weapon/mace/cudgel
-	beltr = /obj/item/ammo_holder/quiver/arrows
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
+	beltr = /obj/item/weapon/whip/chain
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
-		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
-		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
@@ -94,50 +88,63 @@
 		H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/sneaking, 1, TRUE)
-		H.change_stat(STATKEY_STR, 2)
-		H.change_stat(STATKEY_PER, 2)
-		H.change_stat(STATKEY_CON, 1)
-		H.change_stat(STATKEY_END, 1)
-		H.change_stat(STATKEY_SPD, 1)
+		H.change_stat(STATKEY_STR, 1)
+		H.change_stat(STATKEY_END, 2)
+		H.change_stat(STATKEY_PER, -1)
 		H.verbs |= /mob/proc/haltyell
 		ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_KNOWBANDITS, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 
+/datum/advclass/gatemaster/gatemaster_mace
+	name = "Gatemaster Mace"
+	tutorial = "Years of work let your body grow acustome to the job. Gorwing large, fitting to your chair. \
+	Even if you may be slower, but you dont need to be fast. \
+	They are the ones that need to get past you after all. \
+	Let the try to break through your armor, and let them learn how easy skulls break under cold hard steel."
+	outfit = /datum/outfit/job/gatemaster/mace
+	category_tags = list(CTAG_GATEMASTER)
 
-/datum/outfit/job/gatemaster//pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/gatemaster/mace/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = pick(/obj/item/clothing/head/roguehood/guard, /obj/item/clothing/head/roguehood/guardsecond)
-	cloak = /obj/item/clothing/cloak/stabard/guard
 	armor = /obj/item/clothing/armor/medium/scale
-	armor = /obj/item/clothing/armor/leather/advanced
-	shirt = /obj/item/clothing/armor/gambeson
 	neck = /obj/item/clothing/neck/gorget
 	gloves = /obj/item/clothing/gloves/chain
-	beltr = /obj/item/weapon/sword/rapier
-	backr = /obj/item/weapon/shield/tower/buckleriron
+	shoes = /obj/item/clothing/shoes/boots/armor/light
+	beltr = /obj/item/weapon/mace/steel
+	backr = /obj/item/weapon/shield/heater
 	if(H.mind)
-		H.mind?.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 4, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-		H.mind?.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-		H.change_stat(STATKEY_END, 2)
-		H.change_stat(STATKEY_SPD, 2)
+		H.change_stat(STATKEY_STR, 1)
+		H.change_stat(STATKEY_CON, 2)
+		H.change_stat(STATKEY_END, -1)
+		H.change_stat(STATKEY_SPD, -1)
 		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_KNOWBANDITS, TRAIT_GENERIC)
-		ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 		H.verbs |= /mob/proc/haltyell
 
-/datum/outfit/job/watchman/ranger/pre_equip(mob/living/carbon/human/H)
+/datum/advclass/gatemaster/gatemaster_bow
+	name = "Gatemaster Bow"
+	tutorial = "Years of work let your body grow acustome to the job. Gorwing large, fitting to your chair. \
+	Even if you may be slower, but you dont need to be fast. \
+	They ae the ones that need to get past you after all. \
+	Let the try to break through your armor, and let them learn how easy skulls break under cold hard steel."
+	outfit = /datum/outfit/job/gatemaster/bow
+
+	category_tags = list(CTAG_GATEMASTER)
+
+/datum/outfit/job/gatemaster/bow/pre_equip(mob/living/carbon/human/H)
 	..()
 	head = /obj/item/clothing/head/helmet/kettle
 	cloak = /obj/item/clothing/cloak/stabard/guard
@@ -156,17 +163,17 @@
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-		H.mind?.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 		H.change_stat(STATKEY_STR, 1)
 		H.change_stat(STATKEY_PER, 2)
 		H.change_stat(STATKEY_END, -2)
 		H.change_stat(STATKEY_SPD, 1)
 		H.verbs |= /mob/proc/haltyell
+		ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_KNOWBANDITS, TRAIT_GENERIC)
-		ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
-		var/weapontypec = pickweight(list("Bow" = 6, "Crossbow" = 4)) // Rolls for either a bow or a Crossbow
+		var/weapontypec = pickweight(list("Bow" = 4, "Crossbow" = 6)) // Rolls for either a bow or a Crossbow
 		switch(weapontypec)
 			if("Bow")
 				backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long

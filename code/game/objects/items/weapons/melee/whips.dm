@@ -87,3 +87,29 @@
 	desc = "A dark whip with segmented, ashen spines for a base. Claimed to be hewn from dendrified prisoners of terror."
 	icon_state = "spiderwhip"
 	minstr = 6
+
+//................ Chain Whip ............... //
+/obj/item/weapon/whip/chain
+	force = DAMAGE_WHIP+3
+	possible_item_intents = list(/datum/intent/whip/crack/metal, /datum/intent/whip/lash/metal)
+	name = "chain whip"
+	desc = "An iron chain, fixed to a leather grip. Its incredibly heavy, and unwieldy. You likly hurt yourself more then anyone else with this."
+	icon_state = "whip_chain"
+	icon = 'icons/roguetown/weapons/whips.dmi'
+	slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_BELT | ITEM_SLOT_WRISTS
+	w_class = WEIGHT_CLASS_BULKY
+	resistance_flags = FIRE_PROOF
+	smeltresult = /obj/item/ingot/iron
+	anvilrepair = /datum/skill/craft/weaponsmithing
+	minstr = 8
+	melt_amount = 75
+
+/datum/intent/whip/lash/metal
+	chargetime = 10
+	chargedloop = /datum/looping_sound/flailswing
+	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
+	recovery = 5
+	penfactor = 15
+
+/datum/intent/whip/crack/metal
+	penfactor = 20
