@@ -61,7 +61,7 @@
 	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special = 1, /obj/item/rope/chain = 1)
 
 /datum/advclass/gatemaster/gatemaster_whip
-	name = "Gatemaster "
+	name = "Chainguard Gatemaster"
 	tutorial = "Metal chimes in your hands, their skin rough from those heavy chains you pull. \
 	Day by day, chains pass through your palms. \
 	Day by day, the chains coldness feels more familar. \
@@ -98,11 +98,11 @@
 		ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 
 /datum/advclass/gatemaster/gatemaster_mace
-	name = "Gatemaster Mace"
+	name = " Gatemaster"
 	tutorial = "Years of work let your body grow acustome to the job. Gorwing large, fitting to your chair. \
 	Even if you may be slower, but you dont need to be fast. \
 	They are the ones that need to get past you after all. \
-	Let the try to break through your armor, and let them learn how easy skulls break under cold hard steel."
+	Let them try to break through your armor, and let them learn how easy skulls break under cold hard steel."
 	outfit = /datum/outfit/job/gatemaster/mace
 	category_tags = list(CTAG_GATEMASTER)
 
@@ -126,7 +126,6 @@
 		H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 		H.change_stat(STATKEY_STR, 1)
 		H.change_stat(STATKEY_CON, 2)
-		H.change_stat(STATKEY_END, -1)
 		H.change_stat(STATKEY_SPD, -1)
 		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
