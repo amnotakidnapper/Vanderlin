@@ -16,7 +16,10 @@
 	)
 	allowed_races = list("Humen", "Half-Elf", "Elf", "Dwarf", "Aasimar")
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_IMMORTAL)
-	tutorial = "Tales speak of the Gatemaster's legendary ability to stand still at a gate and ask people questions."
+	tutorial = "Tales speak of the Gatemaster's legendary ability to stand still at a gate and ask people questions. \
+	Some may mock you as lazy sitting on your comfy chair all day, \
+	but the lord themself entrusted you with who is and isnt allowed behind those gate. \
+	You could almost say your like their most trusted person. At least you yourself say that."
 	display_order = JDO_GATEMASTER
 	whitelist_req = FALSE
 	bypass_lastclass = TRUE
@@ -77,7 +80,8 @@
 	gloves = /obj/item/clothing/gloves/chain
 	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather/black
-	beltr = /obj/item/weapon/whip/chain
+	beltl = /obj/item/weapon/mace/cudgel
+	wrists = /obj/item/weapon/whip/chain
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -98,7 +102,7 @@
 		ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 
 /datum/advclass/gatemaster/gatemaster_mace
-	name = " Gatemaster"
+	name = "Bruiser Gatemaster"
 	tutorial = "Years of work let your body grow acustome to the job. Gorwing large, fitting to your chair. \
 	Even if you may be slower, but you dont need to be fast. \
 	They are the ones that need to get past you after all. \
@@ -134,19 +138,16 @@
 		H.verbs |= /mob/proc/haltyell
 
 /datum/advclass/gatemaster/gatemaster_bow
-	name = "Gatemaster Bow"
-	tutorial = "Years of work let your body grow acustome to the job. Gorwing large, fitting to your chair. \
-	Even if you may be slower, but you dont need to be fast. \
-	They ae the ones that need to get past you after all. \
-	Let the try to break through your armor, and let them learn how easy skulls break under cold hard steel."
+	name = "Zadeye Gatemaster"
+	tutorial = "Many may try to sneak past your post, thinking you wont see them. \
+	But the years made your senses grow sharp, and your arrows sharper. \
+	There is yet to be an arrow fired from you, that did not put the fear of the ten into their eyes."
 	outfit = /datum/outfit/job/gatemaster/bow
 
 	category_tags = list(CTAG_GATEMASTER)
 
 /datum/outfit/job/gatemaster/bow/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/helmet/kettle
-	cloak = /obj/item/clothing/cloak/stabard/guard
 	armor = /obj/item/clothing/armor/leather/hide
 	shirt = /obj/item/clothing/armor/gambeson/heavy
 	beltr = /obj/item/weapon/mace/cudgel
