@@ -96,7 +96,7 @@
 	desc = "An iron chain, fixed to a leather grip. Its incredibly heavy, and unwieldy. You likly hurt yourself more then anyone else with this."
 	icon_state = "whip_chain"
 	icon = 'icons/roguetown/weapons/whips.dmi'
-	slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_BELT | ITEM_SLOT_WRISTS
+	slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_BULKY
 	resistance_flags = FIRE_PROOF
 	smeltresult = /obj/item/ingot/iron
@@ -106,7 +106,6 @@
 
 /datum/intent/whip/lash/metal
 	chargetime = 10
-	chargedloop = /datum/looping_sound/flailswing
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	recovery = 5
 	penfactor = 15
