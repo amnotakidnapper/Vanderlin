@@ -83,6 +83,7 @@
 	beltl = /obj/item/weapon/mace/cudgel
 	wrists = /obj/item/weapon/whip/chain
 	if(H.mind)
+		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
@@ -138,7 +139,7 @@
 		H.verbs |= /mob/proc/haltyell
 
 /datum/advclass/gatemaster/gatemaster_bow
-	name = "Zadeye Gatemaster"
+	name = "Archer Gatemaster"
 	tutorial = "Many may try to sneak past your post, thinking you wont see them. \
 	But the years made your senses grow sharp, and your arrows sharper. \
 	There is yet to be an arrow fired from you, that did not put the fear of the ten into their eyes."
@@ -154,7 +155,7 @@
 	neck = /obj/item/clothing/neck/chaincoif/iron
 	gloves = /obj/item/clothing/gloves/leather
 	if(H.mind)
-		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE)
@@ -167,8 +168,7 @@
 		H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 		H.change_stat(STATKEY_STR, 1)
 		H.change_stat(STATKEY_PER, 2)
-		H.change_stat(STATKEY_END, -2)
-		H.change_stat(STATKEY_SPD, 1)
+		H.change_stat(STATKEY_END, -1)
 		H.verbs |= /mob/proc/haltyell
 		ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
