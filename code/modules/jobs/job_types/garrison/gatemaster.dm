@@ -19,7 +19,7 @@
 	tutorial = "Tales speak of the Gatemaster's legendary ability to stand still at a gate and ask people questions. \
 	Some may mock you as lazy sitting on your comfy chair all day, \
 	but the lord themself entrusted you with who is and isnt allowed behind those gate. \
-	You could almost say your like their most trusted person. At least you yourself say that."
+	You could almost say you're the lors most trusted person. At least you yourself like to say that."
 	display_order = JDO_GATEMASTER
 	whitelist_req = FALSE
 	bypass_lastclass = TRUE
