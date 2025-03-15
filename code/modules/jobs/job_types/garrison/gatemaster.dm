@@ -74,6 +74,7 @@
 	..()
 	neck = /obj/item/clothing/neck/gorget
 	armor = /obj/item/clothing/armor/leather/advanced
+	shirt = /obj/item/clothing/armor/chainmail
 	gloves = /obj/item/clothing/gloves/chain
 	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather/black
