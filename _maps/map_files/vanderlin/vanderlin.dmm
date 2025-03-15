@@ -16087,9 +16087,6 @@
 /obj/structure/chair/wood/alt/chair_noble/red{
 	dir = 8
 	},
-/obj/effect/landmark/start/gatemaster{
-	dir = 8
-	},
 /turf/open/floor/hexstone,
 /area/rogue/indoors/town/manorgate)
 "lCO" = (

@@ -53,7 +53,6 @@
 /datum/outfit/job/gatemaster/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	head = /obj/item/clothing/head/helmet/townwatch/alt
-	neck = /obj/item/clothing/neck/gorget
 	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
 	shirt = /obj/item/clothing/armor/gambeson/heavy
 	pants = /obj/item/clothing/pants/trou/leather/guard
@@ -61,7 +60,7 @@
 	head = /obj/item/clothing/head/helmet/townwatch/alt
 	belt = /obj/item/storage/belt/leather/black
 	backl = /obj/item/storage/backpack/satchel/black
-	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special = 1, /obj/item/rope/chain = 1)
+	backpack_contents = list(/obj/item/storage/keyring/manorguard = 1, /obj/item/weapon/knife/dagger/steel/special = 1, /obj/item/rope/chain = 1)
 
 /datum/advclass/gatemaster/gatemaster_whip
 	name = "Chainguard Gatemaster"
@@ -80,8 +79,8 @@
 	gloves = /obj/item/clothing/gloves/chain
 	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather/black
-	beltl = /obj/item/weapon/mace/cudgel
-	wrists = /obj/item/weapon/whip/chain
+	beltr = /obj/item/weapon/mace/cudgel
+	beltl = /obj/item/weapon/whip/chain
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
@@ -177,8 +176,8 @@
 		var/weapontypec = pickweight(list("Bow" = 4, "Crossbow" = 6)) // Rolls for either a bow or a Crossbow
 		switch(weapontypec)
 			if("Bow")
-				backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long
+				backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long
 				beltl = /obj/item/ammo_holder/quiver/arrows
 			if("Crossbow")
-				backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
+				backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 				beltl = /obj/item/ammo_holder/quiver/bolts
