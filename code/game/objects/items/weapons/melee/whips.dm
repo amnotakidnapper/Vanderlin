@@ -101,7 +101,7 @@
 	resistance_flags = FIRE_PROOF
 	smeltresult = /obj/item/ingot/iron
 	anvilrepair = /datum/skill/craft/weaponsmithing
-	minstr = 8
+	minstr = 9
 	melt_amount = 75
 
 /datum/intent/whip/lash/metal
