@@ -76,7 +76,7 @@
 /datum/outfit/job/gatemaster/whip/pre_equip(mob/living/carbon/human/H)
 	..()
 	neck = /obj/item/clothing/neck/gorget
-	armor = /obj/item/clothing/armor/medium/scale
+	armor = /obj/item/clothing/armor/leather/advanced
 	gloves = /obj/item/clothing/gloves/chain
 	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather/black
@@ -113,7 +113,7 @@
 
 /datum/outfit/job/gatemaster/mace/pre_equip(mob/living/carbon/human/H)
 	..()
-	armor = /obj/item/clothing/armor/medium/scale
+	armor = /obj/item/clothing/armor/cuirass
 	neck = /obj/item/clothing/neck/gorget
 	gloves = /obj/item/clothing/gloves/chain
 	shoes = /obj/item/clothing/shoes/boots/armor/light
@@ -152,6 +152,7 @@
 	armor = /obj/item/clothing/armor/leather/hide
 	shirt = /obj/item/clothing/armor/gambeson/heavy
 	beltr = /obj/item/weapon/mace/cudgel
+	shoes = /obj/item/clothing/shoes/boots
 	neck = /obj/item/clothing/neck/chaincoif/iron
 	gloves = /obj/item/clothing/gloves/leather
 	if(H.mind)
@@ -177,7 +178,7 @@
 		switch(weapontypec)
 			if("Bow")
 				backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long
-				backr = /obj/item/ammo_holder/quiver/arrows
+				beltl = /obj/item/ammo_holder/quiver/arrows
 			if("Crossbow")
 				backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
-				backr = /obj/item/ammo_holder/quiver/bolts
+				beltl = /obj/item/ammo_holder/quiver/bolts
