@@ -217,6 +217,9 @@
 /obj/item/storage/keyring/manorguard
 	keys = list(/obj/item/key/manor, /obj/item/key/dungeon, /obj/item/key/garrison, /obj/item/key/walls)
 
+/obj/item/storage/keyring/gatemaster
+	keys = list(/obj/item/key/manor, /obj/item/key/dungeon, /obj/item/key/garrison, /obj/item/key/walls, /obj/item/key/gatemaster)
+
 /obj/item/storage/keyring/archivist
 	keys = list(/obj/item/key/archive, /obj/item/key/manor)
 

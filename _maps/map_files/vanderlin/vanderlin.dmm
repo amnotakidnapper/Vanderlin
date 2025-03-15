@@ -1369,6 +1369,7 @@
 /area/rogue/indoors/town/theatre)
 "aSQ" = (
 /obj/structure/chair/bench/coucha/r,
+/obj/effect/landmark/start/watchman,
 /turf/open/floor/tile,
 /area/rogue/indoors/town/manor)
 "aST" = (
@@ -2647,6 +2648,9 @@
 /area/rogue/indoors/town/church)
 "bMv" = (
 /obj/structure/fake_machine/mail/r,
+/obj/effect/landmark/start/gatemaster{
+	dir = 8
+	},
 /turf/open/floor/ruinedwood/turned,
 /area/rogue/indoors/town/manorgate)
 "bMS" = (
@@ -5627,7 +5631,7 @@
 "dZv" = (
 /obj/structure/mineral_door/wood{
 	locked = 1;
-	lockid = "walls";
+	lockid = "gatemaster";
 	name = "gatekeeper's bedroom door"
 	},
 /turf/open/floor/ruinedwood/spiralfade,
@@ -9620,6 +9624,10 @@
 	},
 /turf/open/floor/ruinedwood,
 /area/rogue/indoors/town)
+"gQl" = (
+/obj/structure/ladder,
+/turf/open/floor/ruinedwood/spiralfade,
+/area/rogue/indoors/town/manorgate)
 "gQn" = (
 /obj/structure/closet/crate/crafted_closet/dark,
 /obj/item/flashlight/flare/torch/lantern,
@@ -10205,6 +10213,24 @@
 /obj/structure/ladder,
 /turf/open/floor/wood,
 /area/rogue/indoors/town/manor)
+"hpP" = (
+/obj/structure/rack/shelf/biggest,
+/obj/item/reagent_containers/glass/bottle/beer/fireleaf{
+	pixel_x = 5;
+	pixel_y = 9
+	},
+/obj/item/reagent_containers/glass/bottle/beer/hagwoodbitter{
+	pixel_x = -5;
+	pixel_y = 9
+	},
+/obj/item/reagent_containers/glass/bottle/beer/ratkept{
+	pixel_x = -5
+	},
+/obj/item/reagent_containers/glass/bottle/beer/stonebeardreserve{
+	pixel_x = 5
+	},
+/turf/open/floor/ruinedwood/spiralfade,
+/area/rogue/indoors/town/manorgate)
 "hpQ" = (
 /turf/open/floor/wood,
 /area/rogue/indoors/town/cell)
@@ -12428,6 +12454,15 @@
 	},
 /turf/open/floor/wood,
 /area/rogue/indoors/town/steward)
+"iQq" = (
+/obj/structure/chair/stool{
+	pixel_y = 5
+	},
+/obj/item/toy/cards/cardhand{
+	pixel_y = -13
+	},
+/turf/open/floor/ruinedwood,
+/area/rogue/outdoors/town/roofs)
 "iQH" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/clothing/head/roguehood/black{
@@ -14198,14 +14233,6 @@
 /obj/structure/rack/shelf/biggest{
 	pixel_x = 1
 	},
-/obj/effect/spawner/map_spawner/loot/weapon{
-	pixel_x = -11;
-	pixel_y = 5
-	},
-/obj/effect/spawner/map_spawner/loot/armor{
-	pixel_x = 4;
-	pixel_y = -4
-	},
 /turf/open/floor/ruinedwood/spiralfade,
 /area/rogue/indoors/town/manorgate)
 "kdw" = (
@@ -14458,6 +14485,16 @@
 /obj/structure/toilet,
 /turf/open/floor/blocks/paving,
 /area/rogue/under/town/basement)
+"klq" = (
+/obj/machinery/light/fueled/wallfire/candle{
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/obj/effect/landmark/start/squire{
+	dir = 8
+	},
+/turf/open/floor/carpet/royalblack,
+/area/rogue/indoors/town/manor)
 "klx" = (
 /obj/structure/window/openclose{
 	dir = 4
@@ -16084,6 +16121,9 @@
 /obj/structure/chair/wood/alt/chair_noble/red{
 	dir = 8
 	},
+/obj/effect/landmark/start/gatemaster{
+	dir = 8
+	},
 /turf/open/floor/hexstone,
 /area/rogue/indoors/town/manorgate)
 "lCO" = (
@@ -16131,6 +16171,10 @@
 	},
 /turf/open/floor/dirt,
 /area/rogue/outdoors/town)
+"lEc" = (
+/obj/structure/fluff/railing/border,
+/turf/open/transparent/openspace,
+/area/rogue/indoors/town/manorgate)
 "lEe" = (
 /obj/structure/flora/grass/water/reeds,
 /turf/open/water/cleanshallow,
@@ -17597,6 +17641,10 @@
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
+/obj/structure/fluff/railing/border,
+/obj/structure/fluff/railing/border{
+	dir = 10
+	},
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town/manorgate)
 "mOo" = (
@@ -17743,6 +17791,7 @@
 /area/rogue/indoors/town/vault)
 "mRi" = (
 /obj/structure/chair/bench/coucha,
+/obj/effect/landmark/start/watchman,
 /turf/open/floor/tile,
 /area/rogue/indoors/town/manor)
 "mSa" = (
@@ -19033,6 +19082,9 @@
 	pixel_y = 0
 	},
 /obj/structure/bed/wool,
+/obj/effect/landmark/start/watchman{
+	dir = 8
+	},
 /turf/open/floor/wood,
 /area/rogue/indoors/town/manor)
 "nMZ" = (
@@ -19895,6 +19947,9 @@
 /area/rogue/indoors/town/church)
 "ozw" = (
 /obj/structure/bed/wool,
+/obj/effect/landmark/start/watchman{
+	dir = 8
+	},
 /turf/open/floor/wood,
 /area/rogue/indoors/town/manor)
 "ozI" = (
@@ -25952,6 +26007,7 @@
 /area/rogue/indoors/town/steward)
 "sYL" = (
 /obj/structure/chair/wood/alt/chair_noble/red,
+/obj/effect/landmark/start/manorguardsman,
 /turf/open/floor/blocks/newstone,
 /area/rogue/indoors/town/manor)
 "sZz" = (
@@ -27089,13 +27145,10 @@
 /turf/open/floor/wood,
 /area/rogue/indoors/town)
 "tLm" = (
-/obj/structure/fluff/railing/border{
-	dir = 8
-	},
 /obj/machinery/light/fueled/torchholder{
 	dir = 1
 	},
-/turf/open/transparent/openspace,
+/turf/open/floor/ruinedwood/spiralfade,
 /area/rogue/indoors/town/manorgate)
 "tLC" = (
 /obj/machinery/light/fueled/wallfire{
@@ -27544,6 +27597,7 @@
 	pixel_y = 3
 	},
 /obj/item/key/tailor,
+/obj/item/key/gatemaster,
 /turf/open/floor/carpet/green,
 /area/rogue/indoors/town/steward)
 "uaD" = (
@@ -29013,21 +29067,6 @@
 "vcP" = (
 /obj/structure/fake_machine/scomm{
 	pixel_y = -32
-	},
-/obj/structure/rack/shelf/biggest,
-/obj/item/reagent_containers/glass/bottle/beer/fireleaf{
-	pixel_x = 5;
-	pixel_y = 9
-	},
-/obj/item/reagent_containers/glass/bottle/beer/hagwoodbitter{
-	pixel_x = -5;
-	pixel_y = 9
-	},
-/obj/item/reagent_containers/glass/bottle/beer/ratkept{
-	pixel_x = -5
-	},
-/obj/item/reagent_containers/glass/bottle/beer/stonebeardreserve{
-	pixel_x = 5
 	},
 /turf/open/floor/ruinedwood/spiralfade,
 /area/rogue/indoors/town/manorgate)
@@ -100123,10 +100162,10 @@ bET
 rDr
 bJN
 exf
-fSk
+klq
 vZg
 vZg
-fSk
+klq
 exf
 gOl
 nUw
@@ -137735,7 +137774,7 @@ acx
 acx
 cYY
 hzl
-oJQ
+hpP
 vcP
 cYY
 jtP
@@ -138139,8 +138178,8 @@ acx
 acx
 cYY
 uwj
-uwj
-uwj
+lEc
+gQl
 cYY
 dCv
 bMv
@@ -176519,9 +176558,9 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
+oVK
+oVK
 iBK
 acx
 acx
@@ -176721,9 +176760,9 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
+oVK
+oVK
 iBK
 acx
 acx
@@ -176923,9 +176962,9 @@ acx
 acx
 acx
 fdp
-fdp
+oVK
 nSp
-iBK
+oVK
 iBK
 acx
 acx
@@ -177125,9 +177164,9 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
+oVK
+oVK
 iBK
 acx
 acx
@@ -177327,9 +177366,9 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
+oVK
+oVK
 iBK
 acx
 acx
@@ -177529,9 +177568,9 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
+oVK
+oVK
 iBK
 iBK
 iBK
@@ -177731,13 +177770,13 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
-iBK
-iBK
-iBK
-iBK
+oVK
+oVK
+oVK
+oVK
+oVK
+oVK
 iBK
 acx
 acx
@@ -177933,13 +177972,13 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
-iBK
-iBK
-iBK
-iBK
+oVK
+oVK
+oVK
+oVK
+oVK
+oVK
 iBK
 acx
 acx
@@ -178135,13 +178174,13 @@ acx
 acx
 acx
 fdp
-fdp
+oVK
 nSp
-iBK
-iBK
-iBK
-iBK
-iBK
+oVK
+oVK
+iQq
+oVK
+oVK
 iBK
 acx
 acx
@@ -178337,13 +178376,13 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
-iBK
-iBK
-iBK
-iBK
+oVK
+oVK
+oVK
+oVK
+oVK
+oVK
 iBK
 acx
 acx
@@ -178539,13 +178578,13 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
-iBK
-iBK
-iBK
-iBK
+oVK
+jwW
+oVK
+oVK
+oVK
+oVK
 iBK
 acx
 acx
@@ -178741,9 +178780,9 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
+oVK
+oVK
 iBK
 iBK
 iBK
@@ -178943,9 +178982,9 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
+oVK
+oVK
 iBK
 acx
 acx
@@ -179145,9 +179184,9 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
+oVK
+oVK
 iBK
 acx
 acx
@@ -179347,9 +179386,9 @@ acx
 acx
 acx
 fdp
-fdp
+oVK
 nSp
-iBK
+oVK
 iBK
 acx
 acx
@@ -179549,9 +179588,9 @@ acx
 acx
 acx
 fdp
-fdp
 oVK
-iBK
+oVK
+oVK
 iBK
 acx
 acx
