@@ -302,7 +302,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/iron/chain_whip
-	name = "Zweihander (+chain)"
+	name = "Chain Whip (+chain)"
 	recipe_name = "a whip made from chains"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron

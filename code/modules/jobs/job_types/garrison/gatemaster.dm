@@ -18,8 +18,8 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_IMMORTAL)
 	tutorial = "Tales speak of the Gatemaster's legendary ability to stand still at a gate and ask people questions. \
 	Some may mock you as lazy sitting on your comfy chair all day, \
-	but the lord themself entrusted you with who is and isnt allowed behind those gate. \
-	You could almost say you're the lors most trusted person. At least you yourself like to say that."
+	but the lord themself entrusted you with who is and isn't allowed behind those gates. \
+	You could almost say you're the lord's most trusted person. At least you yourself like to say that."
 	display_order = JDO_GATEMASTER
 	whitelist_req = FALSE
 	bypass_lastclass = TRUE
@@ -64,7 +64,7 @@
 	name = "Chainguard Gatemaster"
 	tutorial = "Metal chimes in your hands, their skin rough from those heavy chains you pull. \
 	Day by day, chains pass through your palms. \
-	Day by day, the chains coldness feels more familar. \
+	Day by day, the chains' coldness feels more familar. \
 	Day by day, trespassers hear your chain whip rattling."
 	outfit = /datum/outfit/job/gatemaster/whip
 
@@ -174,7 +174,7 @@
 		H.change_stat(STATKEY_PER, 2)
 		H.change_stat(STATKEY_END, -1)
 		H.verbs |= /mob/proc/haltyell
-		ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+		ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_KNOWBANDITS, TRAIT_GENERIC)
 		var/weapontypec = pickweight(list("Bow" = 4, "Crossbow" = 6)) // Rolls for either a bow or a Crossbow

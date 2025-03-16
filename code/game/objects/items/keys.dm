@@ -366,7 +366,7 @@
 
 /obj/item/key/gatemaster
 	name = "gatemaster's key"
-	desc = "This well mentained key belongs to the master of the keeps gate."
+	desc = "This well maintained key belongs to the master of the keep's gate."
 	icon_state = "rustkey"
 	lockid = "gatemaster"
 

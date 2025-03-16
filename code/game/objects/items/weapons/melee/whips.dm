@@ -93,7 +93,7 @@
 	force = DAMAGE_WHIP+3
 	possible_item_intents = list(/datum/intent/whip/crack/metal, /datum/intent/whip/lash/metal)
 	name = "chain whip"
-	desc = "An iron chain, fixed to a leather grip. Its incredibly heavy, and unwieldy. You likly hurt yourself more then anyone else with this."
+	desc = "An iron chain, fixed to a leather grip. Its incredibly heavy, and unwieldy. You'll likely hurt yourself more then anyone else with this."
 	icon_state = "whip_chain"
 	icon = 'icons/roguetown/weapons/whips.dmi'
 	w_class = WEIGHT_CLASS_BULKY
