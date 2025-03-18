@@ -1,10 +1,18 @@
 /datum/job/gatemaster
 	title = "Gatemaster"
+	tutorial = "Tales speak of the Gatemaster's legendary ability to stand still at a gate and ask people questions. \
+	Some may mock you as lazy sitting on your comfy chair all day, \
+	but the lord themself entrusted you with who is and isn't allowed behind those gates. \
+	You could almost say you're the lord's most trusted person. At least you yourself like to say that."
 	flag = GATEMASTER
 	department_flag = GARRISON
-	faction = "Station"
+	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
+	display_order = JDO_GATEMASTER
+	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
+	min_pq = 10
+	bypass_lastclass = TRUE
 
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(
@@ -14,38 +22,12 @@
 		"Dwarf",
 		"Aasimar"
 	)
-	allowed_races = list("Humen", "Half-Elf", "Elf", "Dwarf", "Aasimar")
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_IMMORTAL)
-	tutorial = "Tales speak of the Gatemaster's legendary ability to stand still at a gate and ask people questions. \
-	Some may mock you as lazy sitting on your comfy chair all day, \
-	but the lord themself entrusted you with who is and isn't allowed behind those gates. \
-	You could almost say you're the lord's most trusted person. At least you yourself like to say that."
-	display_order = JDO_GATEMASTER
-	whitelist_req = FALSE
-	bypass_lastclass = TRUE
 
 	outfit = /datum/outfit/job/gatemaster	//Default outfit.
 	advclass_cat_rolls = list(CTAG_GATEMASTER = 20)	//Handles class selection.
 	give_bank_account = 30
-	min_pq = 10
-
 	cmode_music = 'sound/music/cmode/garrison/CombatManAtArms.ogg'
-
-/datum/job/gatemaster/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
-	..()
-	if(L)
-		var/mob/living/carbon/human/H = L
-		H.advsetup = 1
-		H.invisibility = INVISIBILITY_MAXIMUM
-		H.become_blind("advsetup")
-		if(istype(H.cloak, /obj/item/clothing/cloak/stabard/surcoat/guard))
-			var/obj/item/clothing/S = H.cloak
-			var/index = findtext(H.real_name, " ")
-			if(index)
-				index = copytext(H.real_name, 1,index)
-			if(!index)
-				index = H.real_name
-			S.name = "gatemaster jupon ([index])"
+	give_bank_account = 15
 
 /datum/outfit/job/gatemaster
 	job_bitflag = BITFLAG_GARRISON
@@ -59,6 +41,22 @@
 	wrists = /obj/item/clothing/wrists/bracers/leather
 	head = /obj/item/clothing/head/helmet/townwatch/alt
 	belt = /obj/item/storage/belt/leather/black
+
+/datum/job/gatemaster/after_spawn(mob/living/spawned, client/player_client)
+	..()
+	var/mob/living/carbon/human/H = spawned
+	H.advsetup = 1
+	H.invisibility = INVISIBILITY_MAXIMUM
+	H.become_blind("advsetup")
+
+	if(istype(H.cloak, /obj/item/clothing/cloak/stabard/surcoat/guard))
+		var/obj/item/clothing/S = H.cloak
+		var/index = findtext(H.real_name, " ")
+		if(index)
+			index = copytext(H.real_name, 1,index)
+		if(!index)
+			index = H.real_name
+		S.name = "gatemaster jupon ([index])"
 
 /datum/advclass/gatemaster/gatemaster_whip
 	name = "Chainguard Gatemaster"
