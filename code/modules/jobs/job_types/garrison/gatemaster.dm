@@ -36,16 +36,14 @@
 	. = ..()
 	head = /obj/item/clothing/head/helmet/townwatch/alt
 	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
-	shirt = /obj/item/clothing/armor/gambeson/heavy
-	pants = /obj/item/clothing/pants/trou/leather/guard
 	wrists = /obj/item/clothing/wrists/bracers/leather
-	head = /obj/item/clothing/head/helmet/townwatch/alt
 	belt = /obj/item/storage/belt/leather/black
+	pants = /obj/item/clothing/pants/trou/leather/guard
 
 /datum/job/gatemaster/after_spawn(mob/living/spawned, client/player_client)
 	..()
 	var/mob/living/carbon/human/H = spawned
-	H.advsetup = 1
+	H.advsetup = TRUE
 	H.invisibility = INVISIBILITY_MAXIMUM
 	H.become_blind("advsetup")
 
@@ -75,7 +73,6 @@
 	shirt = /obj/item/clothing/armor/chainmail
 	gloves = /obj/item/clothing/gloves/chain
 	shoes = /obj/item/clothing/shoes/boots
-	belt = /obj/item/storage/belt/leather/black
 	beltr = /obj/item/weapon/mace/cudgel
 	beltl = /obj/item/weapon/whip/chain
 	backl = /obj/item/storage/backpack/satchel/black
@@ -111,8 +108,9 @@
 
 /datum/outfit/job/gatemaster/mace/pre_equip(mob/living/carbon/human/H)
 	..()
-	armor = /obj/item/clothing/armor/cuirass
 	neck = /obj/item/clothing/neck/gorget
+	armor = /obj/item/clothing/armor/cuirass
+	shirt = /obj/item/clothing/armor/chainmail
 	gloves = /obj/item/clothing/gloves/chain
 	shoes = /obj/item/clothing/shoes/boots/armor/light
 	beltr = /obj/item/weapon/mace/steel
@@ -148,12 +146,12 @@
 
 /datum/outfit/job/gatemaster/bow/pre_equip(mob/living/carbon/human/H)
 	..()
+	neck = /obj/item/clothing/neck/chaincoif/iron
 	armor = /obj/item/clothing/armor/leather/hide
 	shirt = /obj/item/clothing/armor/gambeson/heavy
-	beltr = /obj/item/weapon/mace/cudgel
 	shoes = /obj/item/clothing/shoes/boots
-	neck = /obj/item/clothing/neck/chaincoif/iron
 	gloves = /obj/item/clothing/gloves/leather
+	beltr = /obj/item/weapon/mace/cudgel
 	backl = /obj/item/storage/backpack/satchel/black
 	backpack_contents = list(/obj/item/storage/keyring/gatemaster = 1, /obj/item/weapon/knife/dagger/steel/special = 1, /obj/item/rope/chain = 1)
 	if(H.mind)
