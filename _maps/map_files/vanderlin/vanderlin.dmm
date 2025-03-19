@@ -3544,6 +3544,10 @@
 /obj/item/key/apartments/apartment20,
 /turf/open/floor/wood,
 /area/rogue/indoors/town)
+"cvJ" = (
+/obj/item/reagent_containers/food/snacks/crow,
+/turf/open/floor/ruinedwood,
+/area/rogue/outdoors/town/roofs)
 "cvO" = (
 /obj/structure/window/solid,
 /turf/open/floor/blocks,
@@ -5236,7 +5240,7 @@
 /turf/open/floor/church,
 /area/rogue/indoors/town/church/chapel)
 "dMz" = (
-/obj/structure/window/openclose{
+/obj/structure/window/openclose/reinforced{
 	dir = 4
 	},
 /turf/open/floor/ruinedwood/turned,
@@ -21259,7 +21263,7 @@
 /turf/open/floor/churchmarble,
 /area/rogue/indoors/town/clinic_large)
 "pzf" = (
-/obj/structure/window/openclose{
+/obj/structure/window/openclose/reinforced{
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/turned,
@@ -22873,7 +22877,7 @@
 /turf/open/floor/grass/yel,
 /area/rogue/outdoors/town)
 "qNC" = (
-/obj/structure/window/openclose{
+/obj/structure/window/openclose/reinforced{
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/spiralfade,
@@ -177838,7 +177842,7 @@ oVK
 oVK
 oVK
 oVK
-oVK
+cvJ
 iBK
 acx
 acx
