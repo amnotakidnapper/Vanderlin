@@ -22876,7 +22876,7 @@
 /obj/structure/window/openclose{
 	dir = 1
 	},
-/turf/closed/wall/mineral/stonebrick,
+/turf/open/floor/ruinedwood/spiralfade,
 /area/rogue/indoors/town/manorgate)
 "qOm" = (
 /turf/open/floor/wood,
@@ -31858,10 +31858,6 @@
 /obj/item/natural/rock/random_ore,
 /turf/open/water/cleanshallow,
 /area/rogue/under/cave)
-"xcJ" = (
-/obj/structure/window/openclose,
-/turf/closed/wall/mineral/stonebrick,
-/area/rogue/indoors/town/manorgate)
 "xcW" = (
 /obj/machinery/light/fueled/wallfire/candle{
 	pixel_y = -32
@@ -138848,7 +138844,7 @@ acx
 acx
 acx
 acx
-xcJ
+cYY
 oJQ
 oJQ
 oJQ
