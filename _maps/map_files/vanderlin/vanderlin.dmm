@@ -6670,10 +6670,9 @@
 /turf/open/floor/ruinedwood/spiral,
 /area/rogue/indoors/town)
 "eDz" = (
-/obj/structure/mineral_door/wood{
-	locked = 1;
-	lockid = "gatemaster"
-	},
+/obj/structure/mineral_door/wood,
+/obj/effect/mapping_helpers/door/access/garrison/gatemaster,
+/obj/effect/mapping_helpers/door/locker,
 /turf/open/floor/ruinedwood/spiralfade,
 /area/rogue/indoors/town/manorgate)
 "eDE" = (
@@ -19197,6 +19196,9 @@
 /obj/structure/fluff/statue/tdummy,
 /turf/open/floor/grass,
 /area/rogue/outdoors/town)
+"nGA" = (
+/turf/closed/wall/mineral/stone/window,
+/area/rogue/indoors/town/manorgate)
 "nGG" = (
 /obj/structure/fluff/railing/wood,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -97252,9 +97254,9 @@ vnF
 sWL
 xWS
 rya
-sIO
+nGA
 cNH
-sIO
+nGA
 tNw
 iSk
 iSk
@@ -97453,11 +97455,11 @@ vnF
 vnF
 sWL
 ntp
-sIO
+nGA
 awF
 lCI
 fSW
-sIO
+nGA
 iSk
 iSk
 iSk
@@ -97655,11 +97657,11 @@ vnF
 vnF
 sWL
 jdk
-sIO
+nGA
 mAr
 fSW
 fSW
-sIO
+nGA
 iSk
 iSk
 eCc
