@@ -86,6 +86,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 	. = ..()
 	update_config_movespeed()
 	update_movespeed(TRUE)
+	become_hearing_sensitive()
 
 /**
  * Generate the tag for this mob
@@ -1261,6 +1262,12 @@ GLOBAL_VAR_INIT(mobids, 1)
 		if(I.item_flags & SLOWS_WHILE_IN_HAND)
 			. += I.slowdown
 
+/mob/proc/set_stat(new_stat)
+	if(new_stat == stat)
+		return
+	. = stat
+	stat = new_stat
+	SEND_SIGNAL(src, COMSIG_MOB_STATCHANGE, new_stat, .)
 
 /mob/say_mod(input, message_mode)
 	var/customsayverb = findtext(input, "*")
