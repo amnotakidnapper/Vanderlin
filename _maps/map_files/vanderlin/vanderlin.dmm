@@ -28294,6 +28294,8 @@
 	pixel_y = 3
 	},
 /obj/item/key/tailor,
+/obj/item/key/atarms,
+/obj/item/key/guest,
 /turf/open/floor/carpet/green,
 /area/rogue/indoors/town/steward)
 "tnK" = (
