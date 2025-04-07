@@ -1347,10 +1347,6 @@
 /obj/structure/soil/debug_soil/random,
 /turf/open/floor/dirt/road,
 /area/rogue/indoors)
-"DY" = (
-/obj/machinery/light/fueled/firebowl,
-/turf/open/floor/concrete,
-/area/rogue/outdoors)
 "EI" = (
 /obj/structure/stairs,
 /turf/open/floor/dirt/road,
@@ -12266,7 +12262,7 @@ cp
 RC
 RC
 cp
-DY
+cp
 cp
 cp
 cp
