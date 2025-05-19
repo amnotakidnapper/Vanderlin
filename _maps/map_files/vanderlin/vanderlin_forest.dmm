@@ -37,10 +37,6 @@
 "aR" = (
 /turf/open/transparent/openspace,
 /area/rogue/indoors)
-"aT" = (
-/obj/effect/traveltile_spawner/horizontal/vampire,
-/turf/open/floor/cobblerock,
-/area/rogue/outdoors/woods)
 "aU" = (
 /obj/structure/flora/grass/water/reeds,
 /turf/open/water/swamp/deep,
@@ -1114,6 +1110,10 @@
 /obj/item/neuFarm/seed/wheat,
 /turf/open/floor/twig,
 /area/rogue/indoors)
+"rN" = (
+/obj/structure/fluff/traveltile/vampire,
+/turf/open/floor/cobblerock,
+/area/rogue/outdoors/woods)
 "sc" = (
 /obj/structure/table/wood{
 	icon_state = "longtable"
@@ -1854,10 +1854,6 @@
 	icon_state = "horzw"
 	},
 /area/rogue/indoors)
-"Er" = (
-/obj/effect/traveltile_spawner/vertical/bandit,
-/turf/open/floor/dirt,
-/area/rogue/outdoors/woods)
 "EB" = (
 /obj/structure/chair/wood/alt{
 	dir = 1
@@ -2793,10 +2789,6 @@
 "VE" = (
 /turf/closed/wall/mineral/stone,
 /area/rogue/indoors)
-"VF" = (
-/obj/effect/traveltile_spawner/horizontal/bandit,
-/turf/open/floor/naturalstone,
-/area/rogue/indoors/cave)
 "VS" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/cobble,
@@ -2902,6 +2894,10 @@
 /area/rogue/indoors)
 "WP" = (
 /turf/closed/wall/mineral/stone,
+/area/rogue/outdoors/woods)
+"WV" = (
+/obj/structure/fluff/traveltile/bandit,
+/turf/open/floor/dirt/road,
 /area/rogue/outdoors/woods)
 "Xk" = (
 /obj/structure/flora/newtree,
@@ -3371,12 +3367,12 @@ Xw
 Xw
 Xw
 Xw
-Aj
-wV
-Er
-wV
-wV
-Aj
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 Xw
 Xw
 Xw
@@ -3573,12 +3569,12 @@ Xw
 Xw
 Xw
 Xw
-Aj
-wV
-wV
-wV
-Aj
-Aj
+Xw
+Xw
+Xw
+Xw
+Xw
+Xw
 Xw
 Xw
 Xw
@@ -3776,10 +3772,10 @@ Xw
 Xw
 Xw
 KH
-wV
-wV
-wV
 Aj
+Aj
+Aj
+Xw
 Xw
 Xw
 Xw
@@ -7075,7 +7071,7 @@ Zf
 "}
 (21,1,1) = {"
 Zf
-Sy
+WV
 Qd
 Qd
 Qd
@@ -7277,7 +7273,7 @@ Zf
 "}
 (22,1,1) = {"
 Zf
-Sy
+WV
 Qd
 Qd
 cA
@@ -7479,7 +7475,7 @@ Zf
 "}
 (23,1,1) = {"
 Zf
-Sy
+WV
 Qd
 Qd
 Qd
@@ -39395,7 +39391,7 @@ Zf
 "}
 (181,1,1) = {"
 Zf
-Sy
+rN
 cA
 Qd
 cA
@@ -39597,8 +39593,8 @@ Zf
 "}
 (182,1,1) = {"
 Zf
-Sy
-aT
+rN
+cA
 cA
 cA
 Qd
@@ -39799,7 +39795,7 @@ Zf
 "}
 (183,1,1) = {"
 Zf
-Sy
+rN
 cA
 Qd
 Qd
@@ -59608,7 +59604,7 @@ Rh
 Wh
 Wh
 Wh
-VF
+Nn
 Nn
 Nn
 Nn
