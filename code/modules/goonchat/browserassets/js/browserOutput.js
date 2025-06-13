@@ -2556,7 +2556,7 @@ $(function() {
 
 	$('#saveLog').click(function(e) {
 		var date = new Date();
-		var fname = ' Vanderlin Chat Log ' +
+		var fname = 'Azure Peak Chat Log ' +
 					date.getFullYear() + '-' +
 					(date.getMonth() + 1 < 10 ? '0' : '') + (date.getMonth() + 1) + '-' +
 					(date.getDate() < 10 ? '0' : '') + date.getDate() + ' ' +
