@@ -53,9 +53,9 @@
 	/// Difficulty of the lock, smaller is harder
 	var/difficulty = 5
 	/// Picks able to be used
-	var/list/lockpicks = list(/obj/item/lockpick)
+	var/list/lockpicks = list(/obj/item/lockpick, /obj/item/needle, /obj/item/kitchen/fork/iron)
 	/// Wedges able to be used
-	var/list/wedges = list(/obj/item/weapon/knife/dagger, /obj/item/lockpick) //when we add more thieves tools check this
+	var/list/wedges = list(/obj/item/weapon/knife/dagger, /obj/item/lockpick, /obj/item/needle, /obj/item/kitchen/fork/iron) //when we add more thieves tools check this
 	/// Can we be picked
 	var/pickable = TRUE
 	/// Requires left/right inputs for key turning

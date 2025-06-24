@@ -255,9 +255,9 @@ SUBSYSTEM_DEF(job)
 					JobDebug("DO incompatible with patron, Player: [player], Job: [job.title], Race: [player.client.prefs.pref_species.name]")
 					continue
 
-				if(get_playerquality(player.ckey) < job.min_pq)
-					JobDebug("DO player lacks Quality. Player: [player], Job: [job.title]")
-					continue
+				//if(get_playerquality(player.ckey) < job.min_pq)
+				//	JobDebug("DO player lacks Quality. Player: [player], Job: [job.title]")
+				//	continue
 
 				if((player.client.prefs.lastclass == job.title) && (!job.bypass_lastclass))
 					JobDebug("DO player already played class, Player: [player], Job: [job.title]")

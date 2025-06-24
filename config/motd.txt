@@ -1,4 +1,5 @@
 <!-- Most valid html will work in here, excluding images. -->
-<center>Vanderlin/Monkestation Discord Server: <a href="https://discord.monkestation.com">https://discord.monkestation.com</a></center>
-<center>* TECHNICAL DISPLAY PLAYTEST *</center>
+<center>Haydut Mahzeni'ne hos geldiniz.</center>
+<center>Vanderlin kodunu kullanan Turk SS13 sunucusu.</center>
+<center>Discord Serveri <a href="https://discord.gg/KzC4CsggTF">https://discord.gg/KzC4CsggTF</a></center>
 <!-- We're no longer so unstable, also it's shit advertising. -->

@@ -149,7 +149,7 @@
 		if("death")
 			return pick('sound/vo/mobs/spider/death.ogg')
 		if("idle")
-			return pick('sound/vo/mobs/spider/idle (1).ogg','sound/vo/mobs/spider/idle (2).ogg','sound/vo/mobs/spider/idle (3).ogg','sound/vo/mobs/spider/idle (4).ogg')
+			return pick('sound/blank.ogg')
 
 /mob/living/simple_animal/hostile/retaliate/spider/taunted(mob/user)
 	emote("aggro")
