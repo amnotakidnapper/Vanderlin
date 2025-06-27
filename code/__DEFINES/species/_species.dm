@@ -146,10 +146,7 @@
 )
 
 /// Patreon only races.
-#define RACES_PLAYER_PATREON list(\
-	RACE_KOBOLD,\
-	RACE_HOLLOWKIN,\
-)
+#define RACES_PLAYER_PATREON list()
 
 /// Guard Races - No Orcs or Dark Elf
 #define RACES_PLAYER_GUARD list(\

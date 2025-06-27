@@ -369,8 +369,6 @@ GLOBAL_LIST_EMPTY(patreon_races)
 	if(!LAZYLEN(GLOB.roundstart_races))
 		generate_selectable_species()
 	var/list/species = GLOB.roundstart_races.Copy()
-	if(!patreon)
-		species -= GLOB.patreon_races
 	return species
 
 /datum/species/proc/check_roundstart_eligible()

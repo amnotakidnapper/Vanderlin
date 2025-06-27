@@ -1040,8 +1040,6 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 						voice_color = sanitize_hexcolor(new_voice)
 
 				if("headshot")
-					if(!patreon)
-						to_chat(user, "This is a patreon exclusive feature, your headshot link will be applied but others will only be able to view it if you are a patreon supporter.")
 
 					to_chat(user, "<span class='notice'>Please use an image of the head and shoulder area to maintain immersion level. Lastly, ["<span class='bold'>do not use a real life photo or use any image that is less than serious.</span>"]</span>")
 					to_chat(user, "<span class='notice'>If the photo doesn't show up properly in-game, ensure that it's a direct image link that opens properly in a browser.</span>")
@@ -1110,9 +1108,6 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 						skin_tone = listy[new_s_tone]
 
 				if("selected_accent")
-					if(!patreon)
-						to_chat(user, "Sorry this is a patreon exclusive feature.")
-						return
 					var/accent = browser_input_list(user, "CHOOSE YOUR HERO'S ACCENT", "VOICE OF THE WORLD", GLOB.accent_list, selected_accent)
 					if(accent)
 						selected_accent = accent
