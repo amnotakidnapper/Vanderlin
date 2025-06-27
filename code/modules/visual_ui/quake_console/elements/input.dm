@@ -486,7 +486,7 @@
 					if(".") char_to_add = ">"
 					if("/") char_to_add = "?"
 					if("`") char_to_add = "~"
-					else char_to_add = uppertext(char_to_add)
+					else char_to_add = locale_uppertext(char_to_add)
 			else
 				char_to_add = lowertext(char_to_add)
 

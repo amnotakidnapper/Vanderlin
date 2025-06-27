@@ -36,7 +36,7 @@ h1.alert, h2.alert	{color: #c9c1ba;font-family: Pterra, TrueType;}
 
 .name					{					font-weight: bold;}
 
-.say					{font-family: Pterra;}
+.say					{font-family: Calibri;}
 .deadsay				{color: #e2c1ff;}
 .binarysay				{color: #20c20e;	background-color: #000000;	display: block;}
 .binarysay a			{color: #00ff00;}
@@ -121,11 +121,11 @@ h1.alert, h2.alert	{color: #c9c1ba;font-family: Pterra, TrueType;}
 
 .interface				{color: #DA00DA;}
 
-.sans					{font-family: "Comic Sans MS", cursive, sans-serif;}
-.papyrus				{font-family: "Papyrus", cursive, sans-serif;}
-.robot					{font-family: "Courier New", cursive, sans-serif;}
+.sans					{font-family: "Calibri", cursive, sans-serif;}
+.papyrus				{font-family: "Calibri", cursive, sans-serif;}
+.robot					{font-family: "Calibri", cursive, sans-serif;}
 
-.human					{font-family: "Honoka Mincho", Pterra;}
+.human					{font-family: "Calibri", Pterra;}
 .elf					{font-family: "Dauphin", cursive, Pterra;}
 .oldpsydonic			{font-family: "Breitkopf Fraktur", Pterra; font-size: 120%;}
 .zybantine				{font-family: "Byzantine", Pterra;}

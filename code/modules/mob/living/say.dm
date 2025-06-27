@@ -217,7 +217,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	message = treat_message(message) // unfortunately we still need this
 	var/sigreturn = SEND_SIGNAL(src, COMSIG_MOB_SAY, args)
 	if (sigreturn & COMPONENT_UPPERCASE_SPEECH)
-		message = uppertext(message)
+		message = locale_uppertext(message)
 	if(!message)
 		return
 

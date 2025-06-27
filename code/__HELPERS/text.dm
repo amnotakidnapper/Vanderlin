@@ -299,7 +299,7 @@
 
 //Returns a string with the first element of the string capitalized.
 /proc/capitalize(t as text)
-	return uppertext(copytext(t, 1, 2)) + copytext(t, 2)
+	return locale_uppertext(copytext_char(t, 1, 2)) + copytext_char(t, 2)
 
 //Centers text by adding spaces to either side of the string.
 /proc/dd_centertext(message, length)
@@ -381,6 +381,87 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 /proc/random_short_color()
 	return random_string(3, GLOB.hex_characters)
+
+/proc/locale_uppertext(t)
+	. = ""
+	for(var/c in text2charlist(t))
+		switch (c)
+			if ("\u0131")  // ı
+				. += "\u0049"  // I
+			if ("\u0069")  // i
+				. += "\u0130" // İ
+			if ("\u00FC")  // ü
+				. += "\u00DC"  // Ü
+			if ("\u00F6")  // ö
+				. += "\u00D6"  // Ö
+			if ("\u015F")  // ş
+				. += "\u015E"  // Ş
+			if ("\u011F")  // ğ
+				. += "\u011E"  // Ğ
+			if ("\u00E7")  // ç
+				. += "\u00C7"  // Ç
+			else
+				. += uppertext(c)
+
+/proc/locale_lowertext_(t)
+	. = ""
+	for(var/c in text2charlist(t))
+		switch(c)
+			if("\u0049")  // I
+				. += "\u0131"  // ı
+			if("\u0130")  // İ
+				. += "\u0069" // i
+			if ("\u00DC")  // Ü
+				. += "\u00FC"  // ü
+			if ("\u00D6")  // Ö
+				. += "\u00F6"  // ö
+			if ("\u015E")  // Ş
+				. += "\u015F"  // ş
+			if ("\u011E")  // Ğ
+				. += "\u011F"  // ğ
+			if ("\u00C7")  // Ç
+				. += "\u00E7"  // ç
+			else
+				. += LOWER_TEXT(c)
+
+/proc/delocale_text(t)
+	. = ""
+	for(var/c in text2charlist(t))
+		switch(c)
+			if ("\u0131")  // ı
+				. += "\u0069"  // i
+			if ("\u0130")  // İ
+				. += "\u0049" // I
+			if ("\u00DC")  // Ü
+				. += "\u0055"  // U
+			if ("\u00FC")  // ü
+				. += "\u0075"  // u
+			if ("\u00D6")  // Ö
+				. += "\u004F"  // O
+			if ("\u00F6")  // ö
+				. += "\u006F"  // o
+			if ("\u015E")  // Ş
+				. += "\u0053"  // S
+			if ("\u015F")  // ş
+				. += "\u0073"  // s
+			if ("\u011E")  // Ğ
+				. += "\u0047"  // G
+			if ("\u011F")  // ğ
+				. += "\u0067"  // g
+			if ("\u00C7")  // Ç
+				. += "\u0043"  // C
+			if ("\u00E7")  // ç
+				. += "\u0063"  // c
+			else
+				. += c
+
+/proc/text2charlist(text)
+	var/char = ""
+	var/lentext = length(text)
+	. = list()
+	for(var/i = 1, i <= lentext, i += length(char))
+		char = text[i]
+		. += char
 
 /proc/random_color()
 	return random_string(6, GLOB.hex_characters)
@@ -797,7 +878,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 
 
 /proc/random_capital_letter()
-	return uppertext(pick(GLOB.alphabet))
+	return locale_uppertext(pick(GLOB.alphabet))
 
 /proc/unintelligize(message)
 	var/prefix=copytext(message,1,2)
@@ -824,7 +905,7 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 	. = message
 
 /proc/vocal_cord_torn(message)
-	message = uppertext(message)
+	message = locale_uppertext(message)
 	if(prob(20))
 		message = pick("GHHHHHH...", "GLLLL...", "ZZRRRRR...")
 	else

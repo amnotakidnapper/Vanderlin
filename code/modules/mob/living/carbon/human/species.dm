@@ -293,7 +293,7 @@ GLOBAL_LIST_EMPTY(patreon_races)
 			if(islist(value))
 				value = pick(value)
 
-			message = replacetextEx(message, " [uppertext(key)]", " [uppertext(value)]")
+			message = replacetextEx(message, " [locale_uppertext(key)]", " [locale_uppertext(value)]")
 			message = replacetextEx(message, " [capitalize(key)]", " [capitalize(value)]")
 			message = replacetextEx(message, " [key]", " [value]")
 
@@ -330,7 +330,7 @@ GLOBAL_LIST_EMPTY(patreon_races)
 						if(islist(value))
 							value = pick(value)
 
-						message = replacetextEx(message, " [uppertext(key)]", " [uppertext(value)]")
+						message = replacetextEx(message, " [locale_uppertext(key)]", " [locale_uppertext(value)]")
 						message = replacetextEx(message, " [capitalize(key)]", " [capitalize(value)]")
 						message = replacetextEx(message, " [key]", " [value]")
 
