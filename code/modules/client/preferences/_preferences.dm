@@ -1485,8 +1485,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 		if(is_misc_banned(parent.ckey, BAN_MISC_PUNISHMENT_CURSE))
 			ADD_TRAIT(character, TRAIT_PUNISHMENT_CURSE, TRAIT_BAN_PUNISHMENT)
 
-		if(patreon)
-			character.accent = selected_accent
+		character.accent = selected_accent
 
 	/* :V */
 
